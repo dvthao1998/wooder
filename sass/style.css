@@ -1,5 +1,6 @@
 html {
   font-family: pb;
+  outline: 1px solid limegreen !important;
 }
 
 html,
@@ -740,6 +741,11 @@ template {
   transform: translateX(-50%);
 }
 
+.design {
+  position: relative;
+  background-attachment: fixed;
+  padding: 190px 0;
+}
 .design::before {
   content: "";
   position: absolute;
@@ -747,14 +753,14 @@ template {
   width: 100%;
   height: 100%;
   background-color: #010101;
-  opacity: 1;
+  opacity: 0.5;
   pointer-events: none;
-  z-index: 1;
 }
 .design .content2 {
   padding: 30px 30px;
   width: 50%;
-  transform: translateY(50%);
+  transform: translateY(1%);
+  z-index: 1;
 }
 .design .content2 h2 {
   color: #bea67c;
@@ -776,9 +782,12 @@ template {
 }
 
 .about {
-  display: flex;
-  align-items: center;
   padding: 88px 30px;
+}
+.about .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about .contain {
   padding: 0px 60px;
@@ -845,6 +854,10 @@ template {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.dad-gal .container .list-img .gal-img {
+  transition: 0.5s;
+  filter: grayscale(100%);
+}
 .dad-gal .container .list-img .gal-img:first-child {
   grid-column: 1/2;
   grid-row: 1/2;
@@ -862,8 +875,9 @@ template {
   grid-column: 3/4;
 }
 .dad-gal .container .list-img .gal-img:hover {
-  filter: grayscale(100%);
+  filter: brightness(100%);
   cursor: pointer;
+  transform: scale(0.9);
 }
 
 .news {
